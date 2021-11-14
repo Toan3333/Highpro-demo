@@ -1,0 +1,95 @@
+.blog {
+  background-color: $bg-testimonial;
+  padding-top: 5rem;
+  padding-bottom: 16.8rem;
+
+  &-list {
+    margin-top: 9rem;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 3rem;
+  }
+
+  &-img {
+    background-color: $white-color;
+    text-align: center;
+    box-shadow: 0rem 0rem 3rem -1.7rem #424141;
+    overflow: hidden;
+    margin-bottom: 5rem;
+    height: 28rem;
+
+    img {
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+
+  &-title {
+    font-size: 2.6rem;
+    color: #232323;
+    font-weight: 600;
+    margin-bottom: 2rem;
+  }
+
+  &-desc {
+    line-height: 2.8rem;
+  }
+
+  @media screen and (max-width: 1023px) {
+    padding-bottom: 10rem;
+    .blog-list {
+      display: grid;
+      justify-content: flex-start;
+      grid-auto-columns: 30rem;
+      grid-auto-flow: column;
+      grid-gap: 2rem;
+      overflow: auto;
+      overflow-y: hidden;
+      scroll-snap-type: x mandatory;
+      scroll-snap-stop: always;
+      -ms-touch-action: manipulation;
+      touch-action: manipulation;
+      -webkit-overflow-scrolling: touch;
+      scroll-padding: 1rem;
+      grid-template-columns: unset;
+    }
+    .blog-list::-webkit-scrollbar {
+      display: none;
+      width: 0;
+    }
+    .blog-list > * {
+      scroll-snap-align: start;
+    }
+  }
+
+  @media screen and (max-width: 767px) {
+    padding-top: 3rem;
+    padding-bottom: 5rem;
+
+    .blog-list {
+      margin-top: 4rem;
+      overflow: unset;
+      overflow-y: unset;
+      justify-content: flex-start;
+      grid-auto-columns: unset;
+      grid-auto-flow: unset;
+    }
+
+    @media screen and (max-width: 374px) {
+      .blog-list {
+        margin-top: 4rem;
+        overflow: unset;
+        overflow-y: unset;
+        justify-content: flex-start;
+        grid-auto-columns: unset;
+        grid-auto-flow: unset;
+      }
+
+      &-img {
+        img {
+          width: 100%;
+        }
+      }
+    }
+  }
+}

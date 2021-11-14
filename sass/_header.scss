@@ -1,0 +1,149 @@
+.header {
+  background-image: linear-gradient(to right, #343995, #7027fe);
+  height: 70rem;
+  width: 100%;
+  background-size: 100%;
+  margin-bottom: 5rem;
+
+  &-main {
+    padding-top: 4rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  &-logo {
+    display: flex;
+    align-items: center;
+  }
+
+  &-title {
+    font-size: 3rem;
+    font-weight: bold;
+    color: $white;
+    margin-left: 1.6rem;
+  }
+
+  &-navbar {
+    color: $white;
+  }
+
+  &-icon {
+    margin-right: 4rem;
+  }
+
+  &-bottom {
+    margin-top: 5.5rem;
+  }
+  &-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 4.4rem;
+  }
+  &-left {
+    max-width: 60rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+  &-left-title {
+    color: $blue;
+    font-size: 9rem;
+    font-weight: bold;
+  }
+  &-left-title-small {
+    color: $white;
+    font-size: 3rem;
+    font-weight: bold;
+  }
+  &-left-desc {
+    margin-top: 3.6rem;
+    font-size: 1.7rem;
+    color: $white;
+    margin-bottom: 9rem;
+  }
+  &-right {
+    max-width: 50rem;
+    animation: identifier 3s infinite linear;
+  }
+
+  @keyframes identifier {
+    0%,
+    100% {
+      transform: translateY(0rem);
+    }
+
+    50% {
+      transform: translateY(3rem);
+    }
+  }
+
+  @media screen and (max-width: 1024px) {
+    &-main {
+      padding: 4rem 1.5rem;
+    }
+  }
+
+  @media screen and (max-width: 1023px) {
+    &-main {
+      padding: 4rem 1.5rem;
+    }
+
+    &-icon {
+      margin-right: 2rem;
+    }
+
+    &-left {
+      max-width: 40rem;
+    }
+
+    &-left-title {
+      font-size: 7rem;
+      margin-bottom: 2rem;
+    }
+
+    &-right {
+      max-width: 30rem;
+
+      img {
+        width: 100%;
+      }
+    }
+  }
+  @media screen and (max-width: 767px) {
+    overflow: hidden;
+    &-bottom {
+      margin-top: 0;
+    }
+    &-grid {
+      grid-template-columns: repeat(1, 1fr);
+      grid-gap: 2rem;
+    }
+
+    &-left-title {
+      font-size: 4rem;
+      margin-bottom: 1rem;
+    }
+
+    &-left-title-small {
+      font-size: 2.5rem;
+      font-weight: 600;
+    }
+
+    &-left-desc {
+      font-size: 1.6rem;
+      line-height: 2.4rem;
+    }
+
+    &-left-desc {
+      margin-bottom: 1rem;
+      margin-top: 1rem;
+    }
+
+    @media screen and (max-width: 374px) {
+      &-title {
+        font-size: 1.6rem;
+      }
+    }
+  }
+}
